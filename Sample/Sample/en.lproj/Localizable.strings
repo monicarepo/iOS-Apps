@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Sample
+
+  Created by Moni on 01/09/25.
+  
+*/
+"app_name" = "Sample Application";
+"app_name_chapter %@" = "Sample Application Chapter: %@";
+"app_title" = "Title";
+"cancel" = "Cancel";
+"edit" = "Edit";
+"add" = "Add";
+"submit" = "Submit";
+"conform" = "Conform";
+"delete" = "Delete";
+"success" = "Success";
+"error" = "Error";
+"profile" = "Profile";
+"first_name" = "First Name";
+"last_name" = "Last Name";
+"middle_name" = "Middle Name";

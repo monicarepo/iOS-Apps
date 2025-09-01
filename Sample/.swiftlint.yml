@@ -1,0 +1,7 @@
+
+opt_in_rules: # some rules are turned off by default, so you need to opt-in
+  - empty_count
+#  - force_unwrapping
+
+#force_unwrapping:
+#  severity: warning

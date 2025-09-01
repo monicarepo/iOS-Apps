@@ -1,0 +1,22 @@
+/* 
+  Localizable.strings
+  Sample
+
+  Created by Moni on 01/09/25.
+  
+*/
+"app_name" = "மாதிரி மொபைல் பயன்பாடு";
+"app_name_chapter %@" = "மாதிரி மொபைல் பயன்பாடு படிவம்: %@";
+"app_title" = "படிவம்";
+"cancel" = "Cancel";
+"edit" = "Edit";
+"add" = "Add";
+"submit" = "Submit";
+"conform" = "Conform";
+"delete" = "Delete";
+"success" = "Success";
+"error" = "Error";
+"profile" = "Profile";
+"first_name" = "First Name";
+"last_name" = "Last Name";
+"middle_name" = "Middle Name";
