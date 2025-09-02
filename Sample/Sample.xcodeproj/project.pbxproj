@@ -24,6 +24,9 @@
 		FDCF43992E667911009FB967 /* Sample-QA.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FDCF43982E667911009FB967 /* Sample-QA.xcconfig */; };
 		FDCF439B2E667949009FB967 /* Sample-Prod.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = FDCF439A2E667949009FB967 /* Sample-Prod.xcconfig */; };
 		FDCF43A02E667CE9009FB967 /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF439F2E667CE9009FB967 /* ConfigurationManager.swift */; };
+		FDCF43A32E677D0C009FB967 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FDCF43A22E677D0C009FB967 /* FirebaseAnalytics */; };
+		FDCF43A52E677D0C009FB967 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FDCF43A42E677D0C009FB967 /* FirebaseCrashlytics */; };
+		FDCF43A72E677F03009FB967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43A62E677F03009FB967 /* AppDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +65,10 @@
 		FDCF439D2E667998009FB967 /* SampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDCF439E2E667C69009FB967 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		FDCF439F2E667CE9009FB967 /* ConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		FDCF43A62E677F03009FB967 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		FDCF43A82E67801B009FB967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDCF43AA2E67801B009FB967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDCF43AC2E67801B009FB967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -85,6 +92,8 @@
 				FDCF43412E653011009FB967 /* NetworkLibrary in Frameworks */,
 				FDCF433B2E652FCD009FB967 /* SwiftyBeaver in Frameworks */,
 				FDCF433E2E652FF1009FB967 /* Utility in Frameworks */,
+				FDCF43A52E677D0C009FB967 /* FirebaseCrashlytics in Frameworks */,
+				FDCF43A32E677D0C009FB967 /* FirebaseAnalytics in Frameworks */,
 				FDCF43522E65F559009FB967 /* Swinject in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -121,6 +130,7 @@
 		FDCF43752E663C79009FB967 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				FDCF43AE2E67801B009FB967 /* Firebase */,
 				FDCF439E2E667C69009FB967 /* Info.plist */,
 				FDCF43952E6678CA009FB967 /* Configuration */,
 				FDCF43812E663F0A009FB967 /* Strings+Generated.swift */,
@@ -132,6 +142,7 @@
 				FDCF43722E663C79009FB967 /* Logger.swift */,
 				FDCF43732E663C79009FB967 /* SampleApp.swift */,
 				FDCF43742E663C79009FB967 /* ViewModel.swift */,
+				FDCF43A62E677F03009FB967 /* AppDelegate.swift */,
 			);
 			path = Sample;
 			sourceTree = "<group>";
@@ -147,6 +158,40 @@
 			path = Configuration;
 			sourceTree = "<group>";
 		};
+		FDCF43A92E67801B009FB967 /* Dev */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43A82E67801B009FB967 /* GoogleService-Info.plist */,
+			);
+			path = Dev;
+			sourceTree = "<group>";
+		};
+		FDCF43AB2E67801B009FB967 /* Prod */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43AA2E67801B009FB967 /* GoogleService-Info.plist */,
+			);
+			path = Prod;
+			sourceTree = "<group>";
+		};
+		FDCF43AD2E67801B009FB967 /* Qa */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43AC2E67801B009FB967 /* GoogleService-Info.plist */,
+			);
+			path = Qa;
+			sourceTree = "<group>";
+		};
+		FDCF43AE2E67801B009FB967 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43A92E67801B009FB967 /* Dev */,
+				FDCF43AB2E67801B009FB967 /* Prod */,
+				FDCF43AD2E67801B009FB967 /* Qa */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -154,6 +199,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = FDCF43302E652F8C009FB967 /* Build configuration list for PBXNativeTarget "Sample" */;
 			buildPhases = (
+				FDCF43B02E6785DF009FB967 /* Firebase */,
 				FDCF435B2E662DBE009FB967 /* SwiftGen */,
 				FDCF43542E65F716009FB967 /* SwiftLint Script */,
 				FDCF43092E652F8B009FB967 /* Sources */,
@@ -171,6 +217,8 @@
 				FDCF433D2E652FF1009FB967 /* Utility */,
 				FDCF43402E653011009FB967 /* NetworkLibrary */,
 				FDCF43512E65F559009FB967 /* Swinject */,
+				FDCF43A22E677D0C009FB967 /* FirebaseAnalytics */,
+				FDCF43A42E677D0C009FB967 /* FirebaseCrashlytics */,
 			);
 			productName = Sample;
 			productReference = FDCF43942E6675B2009FB967 /* Sample.app */;
@@ -261,6 +309,7 @@
 				FDCF433C2E652FF1009FB967 /* XCRemoteSwiftPackageReference "Utility" */,
 				FDCF433F2E653011009FB967 /* XCRemoteSwiftPackageReference "Network-Library" */,
 				FDCF43502E65F559009FB967 /* XCRemoteSwiftPackageReference "Swinject" */,
+				FDCF43A12E677D0C009FB967 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = FDCF43042E652F8B009FB967;
@@ -358,6 +407,24 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftformat > /dev/null; then\n  swiftformat .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
 		};
+		FDCF43B02E6785DF009FB967 /* Firebase */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Firebase;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Name of the resource we're selectively copying\nGOOGLESERVICE_INFO_PLIST=GoogleService-Info.plist\n\n# Get references to dev and prod versions of the GoogleService-Info.plist\n# NOTE: These should only live on the file system and should NOT be part of the target (since we'll be adding them to the target manually)\nGOOGLESERVICE_INFO_DEV=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Dev/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_PROD=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Prod/${GOOGLESERVICE_INFO_PLIST}\nGOOGLESERVICE_INFO_QA=${PROJECT_DIR}/${TARGET_NAME}/Firebase/Qa/${GOOGLESERVICE_INFO_PLIST}\n\n# Make sure the dev version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_DEV}\"\nif [ ! -f $GOOGLESERVICE_INFO_DEV ]\nthen\n    echo \"No Development GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n\n# Make sure the prod version of GoogleService-Info.plist exists\necho \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_PROD}\"\nif [ ! -f $GOOGLESERVICE_INFO_PROD ]\nthen\n    echo \"No Production GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n    exit 1\nfi\n    \n# Make sure the QA version of GoogleService-Info.plist exists\n    echo \"Looking for ${GOOGLESERVICE_INFO_PLIST} in ${GOOGLESERVICE_INFO_QA}\"\n    if [ ! -f $GOOGLESERVICE_INFO_QA ]\n    then\n        echo \"No QA GoogleService-Info.plist found. Please ensure it's in the proper directory.\"\n        exit 1\nfi\n\n# Get a reference to the destination location for the GoogleService-Info.plist\nPLIST_DESTINATION=${BUILT_PRODUCTS_DIR}/${PRODUCT_NAME}.app\necho \"Will copy ${GOOGLESERVICE_INFO_PLIST} to final destination: ${PLIST_DESTINATION}\"\n\n# Copy over the prod GoogleService-Info.plist for Release builds\nif [ \"${CONFIGURATION}\" == \"Debug-Prod\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_PROD}\"\ncp \"${GOOGLESERVICE_INFO_PROD}\" \"${PLIST_DESTINATION}\"\nelif [ \"${CONFIGURATION}\" == \"Debug-QA\" ]\nthen\necho \"Using ${GOOGLESERVICE_INFO_QA}\"\ncp \"${GOOGLESERVICE_INFO_QA}\" \"${PLIST_DESTINATION}\"\nelse\necho \"Using ${GOOGLESERVICE_INFO_DEV}\"\ncp \"${GOOGLESERVICE_INFO_DEV}\" \"${PLIST_DESTINATION}\"\nfi\n";
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -368,6 +435,7 @@
 				FDCF43A02E667CE9009FB967 /* ConfigurationManager.swift in Sources */,
 				FDCF43782E663C79009FB967 /* ViewModel.swift in Sources */,
 				FDCF43792E663C79009FB967 /* ContentView.swift in Sources */,
+				FDCF43A72E677F03009FB967 /* AppDelegate.swift in Sources */,
 				FDCF437A2E663C79009FB967 /* Item.swift in Sources */,
 				FDCF437B2E663C79009FB967 /* Injection.swift in Sources */,
 				FDCF43822E663F0A009FB967 /* Strings+Generated.swift in Sources */,
@@ -1276,6 +1344,14 @@
 				minimumVersion = 2.9.1;
 			};
 		};
+		FDCF43A12E677D0C009FB967 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 12.2.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1298,6 +1374,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = FDCF43502E65F559009FB967 /* XCRemoteSwiftPackageReference "Swinject" */;
 			productName = Swinject;
+		};
+		FDCF43A22E677D0C009FB967 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDCF43A12E677D0C009FB967 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		FDCF43A42E677D0C009FB967 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FDCF43A12E677D0C009FB967 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
