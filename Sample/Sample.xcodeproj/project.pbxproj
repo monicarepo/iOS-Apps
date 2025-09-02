@@ -27,6 +27,8 @@
 		FDCF43A32E677D0C009FB967 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = FDCF43A22E677D0C009FB967 /* FirebaseAnalytics */; };
 		FDCF43A52E677D0C009FB967 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = FDCF43A42E677D0C009FB967 /* FirebaseCrashlytics */; };
 		FDCF43A72E677F03009FB967 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43A62E677F03009FB967 /* AppDelegate.swift */; };
+		FDCF43B22E67A182009FB967 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43B12E67A179009FB967 /* AnalyticsManager.swift */; };
+		FDCF43B42E67A32C009FB967 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43B32E67A322009FB967 /* FirebaseAnalyticsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +71,8 @@
 		FDCF43A82E67801B009FB967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDCF43AA2E67801B009FB967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		FDCF43AC2E67801B009FB967 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		FDCF43B12E67A179009FB967 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
+		FDCF43B32E67A322009FB967 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -130,6 +134,8 @@
 		FDCF43752E663C79009FB967 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				FDCF43B32E67A322009FB967 /* FirebaseAnalyticsManager.swift */,
+				FDCF43B12E67A179009FB967 /* AnalyticsManager.swift */,
 				FDCF43AE2E67801B009FB967 /* Firebase */,
 				FDCF439E2E667C69009FB967 /* Info.plist */,
 				FDCF43952E6678CA009FB967 /* Configuration */,
@@ -434,6 +440,7 @@
 			files = (
 				FDCF43A02E667CE9009FB967 /* ConfigurationManager.swift in Sources */,
 				FDCF43782E663C79009FB967 /* ViewModel.swift in Sources */,
+				FDCF43B22E67A182009FB967 /* AnalyticsManager.swift in Sources */,
 				FDCF43792E663C79009FB967 /* ContentView.swift in Sources */,
 				FDCF43A72E677F03009FB967 /* AppDelegate.swift in Sources */,
 				FDCF437A2E663C79009FB967 /* Item.swift in Sources */,
@@ -441,6 +448,7 @@
 				FDCF43822E663F0A009FB967 /* Strings+Generated.swift in Sources */,
 				FDCF437C2E663C79009FB967 /* Logger.swift in Sources */,
 				FDCF437D2E663C79009FB967 /* SampleApp.swift in Sources */,
+				FDCF43B42E67A32C009FB967 /* FirebaseAnalyticsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
