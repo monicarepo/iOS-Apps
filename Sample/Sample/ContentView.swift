@@ -5,8 +5,8 @@
 //  Created by Moni on 31/08/25.
 //
 
-import SwiftUI
 import SwiftData
+import SwiftUI
 
 struct ContentView: View {
     @Environment(\.modelContext) private var modelContext
@@ -20,7 +20,8 @@ struct ContentView: View {
             VStack {
                 Text("app_name")
                 Text("app_name_chapter \(count)")
-//                Text(L10n.appNameChapter(count))
+                Text(L10n.appNameChapter(count))
+                Text(API.baseURL)
             }
 //            List {
 //                ForEach(items) { item in

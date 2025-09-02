@@ -1,0 +1,10 @@
+//
+//  Sample-Prod.xcconfig
+//  Sample
+//
+//  Created by Moni on 01/09/25.
+//
+
+// Configuration settings file format documentation can be found at:
+// https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
+BASE_URL = developer.apple.com/prod

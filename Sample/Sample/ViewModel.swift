@@ -14,5 +14,8 @@ class ViewModel: ObservableObject {
 
     func onAppear() {
         logger.info("ContentView View is loaded")
+        print(ConfigurationManager.environment)
     }
+
+    func checkFormate() {}
 }

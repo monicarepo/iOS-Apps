@@ -17,7 +17,6 @@ protocol LoggerType {
 }
 
 extension LoggerType {
-
     func verbose(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         verbose(message, file, function, line)
     }
@@ -41,7 +40,6 @@ extension LoggerType {
 
 // Create a singleton
 class Logger: LoggerType {
-
 //    static let shared = Logger()
 
 //    private init() {}
@@ -54,24 +52,23 @@ class Logger: LoggerType {
         return log
     }()
 
-    func verbose( _ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
+    func verbose(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         log.verbose(message, file: file, function: function, line: line)
     }
 
-    func debug( _ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
+    func debug(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         log.debug(message, file: file, function: function, line: line)
     }
 
-    func info( _ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
+    func info(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         log.info(message, file: file, function: function, line: line)
     }
 
-    func warning( _ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
+    func warning(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         log.warning(message, file: file, function: function, line: line)
     }
 
-    func error( _ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
+    func error(_ message: String, _ file: String = #file, _ function: String = #function, _ line: Int = #line) {
         log.error(message, file: file, function: function, line: line)
     }
-
 }

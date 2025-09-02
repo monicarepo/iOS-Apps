@@ -19,7 +19,7 @@ final class Injection {
         }
 
         set {
-           _container = newValue
+            _container = newValue
         }
     }
 
@@ -28,7 +28,7 @@ final class Injection {
     private func buildContainer() -> Container {
         let container = Container()
         container.register(LoggerType.self) { _ in
-            return Logger()
+            Logger()
         }
         return container
     }
@@ -36,8 +36,8 @@ final class Injection {
 
 @propertyWrapper struct Injected<Dependency> {
     let wrappedValue: Dependency
-    
+
     init() {
-        self.wrappedValue = Injection.shared.container.resolve(Dependency.self)!
+        wrappedValue = Injection.shared.container.resolve(Dependency.self)!
     }
 }
