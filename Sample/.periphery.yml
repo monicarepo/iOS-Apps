@@ -1,0 +1,5 @@
+project: Sample.xcodeproj
+retain_objc_annotated: true
+retain_public: true
+schemes:
+- Sample-Dev

@@ -1,0 +1,34 @@
+/Sample/AnalyticsManager.swift warning: Enum 'OnboardingEvent' is unused
+/Sample/AnalyticsManager.swift warning: Extension 'OnboardingEvent' is unused
+/Sample/AnalyticsManager.swift warning: Function 'initialize()' is unused
+/Sample/Configuration/ConfigurationManager.swift warning: Enum case 'qa' is unused
+/Sample/Configuration/ConfigurationManager.swift warning: Enum case 'prod' is unused
+/Sample/ContentView.swift warning: Property 'items' is unused
+/Sample/ContentView.swift warning: Function 'deleteItems(offsets:)' is unused
+/Sample/FirebaseAnalyticsManager.swift warning: Function 'initialize()' is unused
+/Sample/Logger.swift warning: Function 'verbose(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'debug(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'warning(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'error(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'verbose(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'debug(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'warning(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'error(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'verbose(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'debug(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'warning(_:_:_:_:)' is unused
+/Sample/Logger.swift warning: Function 'error(_:_:_:_:)' is unused
+/Strings+Generated.swift warning: Property 'add' is unused
+/Strings+Generated.swift warning: Property 'appName' is unused
+/Strings+Generated.swift warning: Property 'appTitle' is unused
+/Strings+Generated.swift warning: Property 'cancel' is unused
+/Strings+Generated.swift warning: Property 'conform' is unused
+/Strings+Generated.swift warning: Property 'delete' is unused
+/Strings+Generated.swift warning: Property 'edit' is unused
+/Strings+Generated.swift warning: Property 'error' is unused
+/Strings+Generated.swift warning: Property 'firstName' is unused
+/Strings+Generated.swift warning: Property 'lastName' is unused
+/Strings+Generated.swift warning: Property 'middleName' is unused
+/Strings+Generated.swift warning: Property 'profile' is unused
+/Strings+Generated.swift warning: Property 'submit' is unused
+/Strings+Generated.swift warning: Property 'success' is unused
