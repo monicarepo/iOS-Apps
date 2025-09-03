@@ -30,6 +30,11 @@
 		FDCF43B22E67A182009FB967 /* AnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43B12E67A179009FB967 /* AnalyticsManager.swift */; };
 		FDCF43B42E67A32C009FB967 /* FirebaseAnalyticsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43B32E67A322009FB967 /* FirebaseAnalyticsManager.swift */; };
 		FDCF43B72E67BCD0009FB967 /* find_dead_code.rb in Resources */ = {isa = PBXBuildFile; fileRef = FDCF43B62E67BCB7009FB967 /* find_dead_code.rb */; };
+		FDCF43C12E67D001009FB967 /* OnBoardingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43C02E67CFF8009FB967 /* OnBoardingModel.swift */; };
+		FDCF43C32E67D00E009FB967 /* OnBoardingViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43C22E67D007009FB967 /* OnBoardingViewModel.swift */; };
+		FDCF43C52E67D01E009FB967 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43C42E67D015009FB967 /* OnBoardingView.swift */; };
+		FDCF43CF2E68977D009FB967 /* OnBoardingInteriorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43CE2E689770009FB967 /* OnBoardingInteriorView.swift */; };
+		FDCF43D12E68AE0C009FB967 /* GetStartedPopOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43D02E68AE01009FB967 /* GetStartedPopOverView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		FDCF43B12E67A179009FB967 /* AnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsManager.swift; sourceTree = "<group>"; };
 		FDCF43B32E67A322009FB967 /* FirebaseAnalyticsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAnalyticsManager.swift; sourceTree = "<group>"; };
 		FDCF43B62E67BCB7009FB967 /* find_dead_code.rb */ = {isa = PBXFileReference; lastKnownFileType = text.script.ruby; path = find_dead_code.rb; sourceTree = "<group>"; };
+		FDCF43C02E67CFF8009FB967 /* OnBoardingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingModel.swift; sourceTree = "<group>"; };
+		FDCF43C22E67D007009FB967 /* OnBoardingViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewModel.swift; sourceTree = "<group>"; };
+		FDCF43C42E67D015009FB967 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		FDCF43CE2E689770009FB967 /* OnBoardingInteriorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingInteriorView.swift; sourceTree = "<group>"; };
+		FDCF43D02E68AE01009FB967 /* GetStartedPopOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedPopOverView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -86,6 +96,11 @@
 		FDCF43292E652F8C009FB967 /* SampleUITests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = SampleUITests;
+			sourceTree = "<group>";
+		};
+		FDCF43BF2E67CFD6009FB967 /* Utils */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -136,6 +151,8 @@
 		FDCF43752E663C79009FB967 /* Sample */ = {
 			isa = PBXGroup;
 			children = (
+				FDCF43BF2E67CFD6009FB967 /* Utils */,
+				FDCF43BA2E67CF98009FB967 /* UI */,
 				FDCF43B52E67BCAD009FB967 /* scripts */,
 				FDCF43B32E67A322009FB967 /* FirebaseAnalyticsManager.swift */,
 				FDCF43B12E67A179009FB967 /* AnalyticsManager.swift */,
@@ -209,6 +226,50 @@
 			path = scripts;
 			sourceTree = SOURCE_ROOT;
 		};
+		FDCF43BA2E67CF98009FB967 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43BB2E67CFA1009FB967 /* OnBoarding */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		FDCF43BB2E67CFA1009FB967 /* OnBoarding */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43BE2E67CFC1009FB967 /* Model */,
+				FDCF43BD2E67CFB4009FB967 /* ViewModel */,
+				FDCF43BC2E67CFAD009FB967 /* View */,
+			);
+			path = OnBoarding;
+			sourceTree = "<group>";
+		};
+		FDCF43BC2E67CFAD009FB967 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43D02E68AE01009FB967 /* GetStartedPopOverView.swift */,
+				FDCF43CE2E689770009FB967 /* OnBoardingInteriorView.swift */,
+				FDCF43C42E67D015009FB967 /* OnBoardingView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		FDCF43BD2E67CFB4009FB967 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43C22E67D007009FB967 /* OnBoardingViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		FDCF43BE2E67CFC1009FB967 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FDCF43C02E67CFF8009FB967 /* OnBoardingModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -227,6 +288,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				FDCF43BF2E67CFD6009FB967 /* Utils */,
 			);
 			name = Sample;
 			packageProductDependencies = (
@@ -451,15 +515,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDCF43A02E667CE9009FB967 /* ConfigurationManager.swift in Sources */,
+				FDCF43C32E67D00E009FB967 /* OnBoardingViewModel.swift in Sources */,
 				FDCF43782E663C79009FB967 /* ViewModel.swift in Sources */,
 				FDCF43B22E67A182009FB967 /* AnalyticsManager.swift in Sources */,
 				FDCF43792E663C79009FB967 /* ContentView.swift in Sources */,
 				FDCF43A72E677F03009FB967 /* AppDelegate.swift in Sources */,
 				FDCF437A2E663C79009FB967 /* Item.swift in Sources */,
 				FDCF437B2E663C79009FB967 /* Injection.swift in Sources */,
+				FDCF43D12E68AE0C009FB967 /* GetStartedPopOverView.swift in Sources */,
 				FDCF43822E663F0A009FB967 /* Strings+Generated.swift in Sources */,
+				FDCF43C52E67D01E009FB967 /* OnBoardingView.swift in Sources */,
+				FDCF43C12E67D001009FB967 /* OnBoardingModel.swift in Sources */,
 				FDCF437C2E663C79009FB967 /* Logger.swift in Sources */,
 				FDCF437D2E663C79009FB967 /* SampleApp.swift in Sources */,
+				FDCF43CF2E68977D009FB967 /* OnBoardingInteriorView.swift in Sources */,
 				FDCF43B42E67A32C009FB967 /* FirebaseAnalyticsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -20,3 +20,19 @@
 "first_name" = "First Name";
 "last_name" = "Last Name";
 "middle_name" = "Middle Name";
+"skip" = "Skip";
+"next" = "Next";
+"get_started" = "Get Started";
+
+// Onboarding
+"onboarding-title-1" = "Welcome to the sample application";
+"onboarding-title-2" = "Nice Design";
+"onboarding-title-3" = "Connect our app";
+"onboarding-detail-1" = "description 1";
+"onboarding-detail-2" = "description 2";
+"onboarding-detail-3" = "description 3";
+"onboarding_choose_language" = "Choose your preferred language";
+"onboarding_change_latter" = "(Don't worry, you can change it latter)";
+"onboarding_english" = "English";
+"onboarding_tamil" = "Tamil";
+"onboading_lets_go" = "OK, let's go!";

@@ -11,6 +11,7 @@ import SwiftUI
 @main
 struct SampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
+    @AppStorage("onboardingLoaded") var onboardingLoaded: Bool = false
 
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -27,7 +28,11 @@ struct SampleApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if onboardingLoaded {
+                ContentView()
+            } else {
+                OnBoardingView()
+            }
         }
         .modelContainer(sharedModelContainer)
     }

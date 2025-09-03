@@ -36,12 +36,40 @@ enum L10n {
     static let error = L10n.tr("Localizable", "error", fallback: "Error")
     /// First Name
     static let firstName = L10n.tr("Localizable", "first_name", fallback: "First Name")
+    /// Get Started
+    static let getStarted = L10n.tr("Localizable", "get_started", fallback: "Get Started")
     /// Last Name
     static let lastName = L10n.tr("Localizable", "last_name", fallback: "Last Name")
     /// Middle Name
     static let middleName = L10n.tr("Localizable", "middle_name", fallback: "Middle Name")
+    /// Next
+    static let next = L10n.tr("Localizable", "next", fallback: "Next")
+    /// OK, let's go!
+    static let onboadingLetsGo = L10n.tr("Localizable", "onboading_lets_go", fallback: "OK, let's go!")
+    /// description 1
+    static let onboardingDetail1 = L10n.tr("Localizable", "onboarding-detail-1", fallback: "description 1")
+    /// description 2
+    static let onboardingDetail2 = L10n.tr("Localizable", "onboarding-detail-2", fallback: "description 2")
+    /// description 3
+    static let onboardingDetail3 = L10n.tr("Localizable", "onboarding-detail-3", fallback: "description 3")
+    /// Welcome to the sample application
+    static let onboardingTitle1 = L10n.tr("Localizable", "onboarding-title-1", fallback: "Welcome to the sample application")
+    /// Nice Design
+    static let onboardingTitle2 = L10n.tr("Localizable", "onboarding-title-2", fallback: "Nice Design")
+    /// Connect our app
+    static let onboardingTitle3 = L10n.tr("Localizable", "onboarding-title-3", fallback: "Connect our app")
+    /// (Don't worry, you can change it latter)
+    static let onboardingChangeLatter = L10n.tr("Localizable", "onboarding_change_latter", fallback: "(Don't worry, you can change it latter)")
+    /// Choose your preferred language
+    static let onboardingChooseLanguage = L10n.tr("Localizable", "onboarding_choose_language", fallback: "Choose your preferred language")
+    /// English
+    static let onboardingEnglish = L10n.tr("Localizable", "onboarding_english", fallback: "English")
+    /// Tamil
+    static let onboardingTamil = L10n.tr("Localizable", "onboarding_tamil", fallback: "Tamil")
     /// Profile
     static let profile = L10n.tr("Localizable", "profile", fallback: "Profile")
+    /// Skip
+    static let skip = L10n.tr("Localizable", "skip", fallback: "Skip")
     /// Submit
     static let submit = L10n.tr("Localizable", "submit", fallback: "Submit")
     /// Success
