@@ -22,6 +22,10 @@ class LanguageSetting {
         setUpInitialLocale()
     }
 
+    var currentSelectedLanguage: SupportedLanguage = .english {
+        didSet {}
+    }
+
     private func setUpInitialLocale() {
         if let language = UserDefaults.standard.string(forKey: Constants.languageKey.rawValue), let value = SupportedLanguage(rawValue: language) {
             setLocale(language: value)
@@ -42,10 +46,12 @@ class LanguageSetting {
             locale = Locale(identifier: "en")
             UserDefaults.standard.setValue(SupportedLanguage.english.rawValue, forKey: Constants.languageKey.rawValue)
             UserDefaults.standard.synchronize()
+            currentSelectedLanguage = .english
         case .tamil:
             locale = Locale(identifier: "ta")
             UserDefaults.standard.setValue(SupportedLanguage.tamil.rawValue, forKey: Constants.languageKey.rawValue)
             UserDefaults.standard.synchronize()
+            currentSelectedLanguage = .tamil
         }
     }
 }

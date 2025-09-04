@@ -5,9 +5,9 @@
   Created by Moni on 01/09/25.
   
 */
-"app_name" = "Sample Application";
-"app_name_chapter %@" = "Sample Application Chapter: %@";
-"app_title" = "Title";
+"app_name" = "Bible";
+"app_name_chapter %@" = "Bible Chapter: %@";
+"app_title" = "Bible";
 "cancel" = "Cancel";
 "edit" = "Edit";
 "add" = "Add";
@@ -51,3 +51,8 @@
 "about_section2" = "The Old Testament describes the journey of Israel, a people chosen to carry God’s promise. We read about their triumphs and failures, their prophets and kings, and their deep longing for a Savior.The New Testament reveals the fulfillment of that promise in the life of Jesus Christ. His teachings, miracles, death, and resurrection stand at the heart of the Bible’s message: that through Him, all people can find forgiveness, hope, and eternal life. The letters and writings that follow guide believers in living with faith, love, and courage in everyday life";
 "about_conclusion" = "CONCLUSION";
 "about_section3" = "The Bible is more than an ancient manuscript—it is a living message that continues to inspire, comfort, and guide. It tells a story of love, faith, and redemption that invites every reader to find their place in God’s story";
+
+// Settings
+"settings-language" = "Language";
+"settings-title" = "Settings";
+"settings-save-changes" = "SAVE CHANGES";

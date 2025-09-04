@@ -84,7 +84,8 @@ enum ViewTab {
 }
 
 enum HomeNavDestination {
-    case details
+    case settings
+    case languageSelection
 }
 
 enum SavedNavDestination {

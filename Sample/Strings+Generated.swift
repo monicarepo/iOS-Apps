@@ -30,14 +30,14 @@ enum L10n {
     ///   Sample
     ///
     ///   Created by Moni on 01/09/25.
-    static let appName = L10n.tr("Localizable", "app_name", fallback: "Sample Application")
-    /// Sample Application Chapter: %@
+    static let appName = L10n.tr("Localizable", "app_name", fallback: "Bible")
+    /// Bible Chapter: %@
     static func appNameChapter(_ p1: Any) -> String {
-        L10n.tr("Localizable", "app_name_chapter %@", String(describing: p1), fallback: "Sample Application Chapter: %@")
+        L10n.tr("Localizable", "app_name_chapter %@", String(describing: p1), fallback: "Bible Chapter: %@")
     }
 
-    /// Title
-    static let appTitle = L10n.tr("Localizable", "app_title", fallback: "Title")
+    /// Bible
+    static let appTitle = L10n.tr("Localizable", "app_title", fallback: "Bible")
     /// Cancel
     static let cancel = L10n.tr("Localizable", "cancel", fallback: "Cancel")
     /// Conform
@@ -82,6 +82,12 @@ enum L10n {
     static let onboardingTamil = L10n.tr("Localizable", "onboarding_tamil", fallback: "Tamil")
     /// Profile
     static let profile = L10n.tr("Localizable", "profile", fallback: "Profile")
+    /// Language
+    static let settingsLanguage = L10n.tr("Localizable", "settings-language", fallback: "Language")
+    /// SAVE CHANGES
+    static let settingsSaveChanges = L10n.tr("Localizable", "settings-save-changes", fallback: "SAVE CHANGES")
+    /// Settings
+    static let settingsTitle = L10n.tr("Localizable", "settings-title", fallback: "Settings")
     /// Skip
     static let skip = L10n.tr("Localizable", "skip", fallback: "Skip")
     /// Submit

@@ -12,17 +12,28 @@ struct HomeView: View {
     var body: some View {
         NavigationStack(path: $appState.homeNavDestination) {
             VStack {
-                Text("HomeView")
-                    .font(.title)
-                NavigationLink(value: HomeNavDestination.details) {
-                    Text("Open Details")
+//                Text("HomeView")
+//                    .font(.title)
+//                NavigationLink(value: HomeNavDestination.details) {
+//                    Text("Open Details")
+//                }
+            }
+            .navigationTitle(Text("app_title"))
+            .toolbar {
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button {
+                        appState.homeNavDestination.append(.settings)
+                    } label: {
+                        Image(systemName: "gear")
+                    }
                 }
             }
             .navigationDestination(for: HomeNavDestination.self) { destination in
                 switch destination {
-                case .details:
-                    Text("Details")
-//                    DetailsView()
+                case .settings:
+                    SettingsView()
+                case .languageSelection:
+                    LanguageSelectionView()
                 }
             }
         }

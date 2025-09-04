@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-enum SupportedLanguage: String {
-    case english = "en"
-    case tamil = "ta"
+enum SupportedLanguage: String, CaseIterable {
+    case english = "English"
+    case tamil = "தமிழ்"
 }
 
 struct GetStartedPopOverView: View {
@@ -57,11 +57,12 @@ struct GetStartedPopOverView: View {
             languageSetting.setLocale(language: newValue)
         }
         .onAppear {
-            if languageSetting.locale.identifier.contains("ta") {
-                selectedLanguage = .tamil
-            } else {
-                selectedLanguage = .english
-            }
+            selectedLanguage = languageSetting.currentSelectedLanguage
+//            if languageSetting.locale.identifier.contains("ta") {
+//                selectedLanguage = .tamil
+//            } else {
+//                selectedLanguage = .english
+//            }
         }
         .background(Color.white)
         .cornerRadius(20)

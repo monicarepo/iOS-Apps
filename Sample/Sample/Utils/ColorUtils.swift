@@ -13,5 +13,6 @@ extension Color {
 
     struct CustomColor {
         let primaryOrangeColor = Color("primary_orange_color")
+        let secondaryOrangeColor = Color("secondary_orange_color")
     }
 }

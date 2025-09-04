@@ -36,6 +36,12 @@
 		FDCF43CF2E68977D009FB967 /* OnBoardingInteriorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43CE2E689770009FB967 /* OnBoardingInteriorView.swift */; };
 		FDCF43D12E68AE0C009FB967 /* GetStartedPopOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDCF43D02E68AE01009FB967 /* GetStartedPopOverView.swift */; };
 		FDCF43E62E69210A009FB967 /* Color.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDCF43E52E69210A009FB967 /* Color.xcassets */; };
+		FDE650A32E69DF93006467D8 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE650A12E69DF93006467D8 /* SettingsView.swift */; };
+		FDE650AD2E69DF98006467D8 /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE650A42E69DF98006467D8 /* AboutView.swift */; };
+		FDE650AE2E69DF98006467D8 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE650A62E69DF98006467D8 /* HomeView.swift */; };
+		FDE650AF2E69DF98006467D8 /* SavedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE650A82E69DF98006467D8 /* SavedView.swift */; };
+		FDE650B02E69DF98006467D8 /* SampleTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE650AA2E69DF98006467D8 /* SampleTabView.swift */; };
+		FDE650B22E69E1F8006467D8 /* LanguageSelectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDE650B12E69E1ED006467D8 /* LanguageSelectionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +93,12 @@
 		FDCF43CE2E689770009FB967 /* OnBoardingInteriorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingInteriorView.swift; sourceTree = "<group>"; };
 		FDCF43D02E68AE01009FB967 /* GetStartedPopOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetStartedPopOverView.swift; sourceTree = "<group>"; };
 		FDCF43E52E69210A009FB967 /* Color.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Color.xcassets; sourceTree = "<group>"; };
+		FDE650A12E69DF93006467D8 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		FDE650A42E69DF98006467D8 /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
+		FDE650A62E69DF98006467D8 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		FDE650A82E69DF98006467D8 /* SavedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SavedView.swift; sourceTree = "<group>"; };
+		FDE650AA2E69DF98006467D8 /* SampleTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleTabView.swift; sourceTree = "<group>"; };
+		FDE650B12E69E1ED006467D8 /* LanguageSelectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageSelectionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -103,11 +115,6 @@
 		FDCF43BF2E67CFD6009FB967 /* Utils */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		FDCF43D52E691510009FB967 /* Home */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -237,8 +244,9 @@
 		FDCF43BA2E67CF98009FB967 /* UI */ = {
 			isa = PBXGroup;
 			children = (
-				FDCF43D52E691510009FB967 /* Home */,
+				FDE650AC2E69DF98006467D8 /* Home */,
 				FDCF43BB2E67CFA1009FB967 /* OnBoarding */,
+				FDE650A22E69DF93006467D8 /* Settings */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -279,6 +287,58 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		FDE650A22E69DF93006467D8 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				FDE650B12E69E1ED006467D8 /* LanguageSelectionView.swift */,
+				FDE650A12E69DF93006467D8 /* SettingsView.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		FDE650A52E69DF98006467D8 /* About */ = {
+			isa = PBXGroup;
+			children = (
+				FDE650A42E69DF98006467D8 /* AboutView.swift */,
+			);
+			path = About;
+			sourceTree = "<group>";
+		};
+		FDE650A72E69DF98006467D8 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				FDE650A62E69DF98006467D8 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
+		FDE650A92E69DF98006467D8 /* Saved */ = {
+			isa = PBXGroup;
+			children = (
+				FDE650A82E69DF98006467D8 /* SavedView.swift */,
+			);
+			path = Saved;
+			sourceTree = "<group>";
+		};
+		FDE650AB2E69DF98006467D8 /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				FDE650AA2E69DF98006467D8 /* SampleTabView.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		FDE650AC2E69DF98006467D8 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				FDE650A52E69DF98006467D8 /* About */,
+				FDE650A72E69DF98006467D8 /* HomeView */,
+				FDE650A92E69DF98006467D8 /* Saved */,
+				FDE650AB2E69DF98006467D8 /* TabView */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -300,7 +360,6 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FDCF43BF2E67CFD6009FB967 /* Utils */,
-				FDCF43D52E691510009FB967 /* Home */,
 			);
 			name = Sample;
 			packageProductDependencies = (
@@ -530,11 +589,17 @@
 				FDCF43782E663C79009FB967 /* ViewModel.swift in Sources */,
 				FDCF43B22E67A182009FB967 /* AnalyticsManager.swift in Sources */,
 				FDCF43792E663C79009FB967 /* ContentView.swift in Sources */,
+				FDE650B22E69E1F8006467D8 /* LanguageSelectionView.swift in Sources */,
 				FDCF43A72E677F03009FB967 /* AppDelegate.swift in Sources */,
 				FDCF437A2E663C79009FB967 /* Item.swift in Sources */,
 				FDCF437B2E663C79009FB967 /* Injection.swift in Sources */,
 				FDCF43D12E68AE0C009FB967 /* GetStartedPopOverView.swift in Sources */,
+				FDE650AD2E69DF98006467D8 /* AboutView.swift in Sources */,
+				FDE650AE2E69DF98006467D8 /* HomeView.swift in Sources */,
+				FDE650AF2E69DF98006467D8 /* SavedView.swift in Sources */,
+				FDE650B02E69DF98006467D8 /* SampleTabView.swift in Sources */,
 				FDCF43822E663F0A009FB967 /* Strings+Generated.swift in Sources */,
+				FDE650A32E69DF93006467D8 /* SettingsView.swift in Sources */,
 				FDCF43C52E67D01E009FB967 /* OnBoardingView.swift in Sources */,
 				FDCF43C12E67D001009FB967 /* OnBoardingModel.swift in Sources */,
 				FDCF437C2E663C79009FB967 /* Logger.swift in Sources */,
