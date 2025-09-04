@@ -30,14 +30,14 @@ struct OnBoardingView: View {
                         Button {
                             currentIndex = viewModel.onBoardingData.count - 1
                         } label: {
-                            Text(L10n.skip)
+                            Text("skip")
                                 .foregroundColor(Color.gray)
                         }
                         Spacer()
                         Button {
                             currentIndex += 1
                         } label: {
-                            Text(L10n.next)
+                            Text("next")
                                 .foregroundColor(Color.orange)
                         }
                     }.padding(40)
@@ -46,7 +46,7 @@ struct OnBoardingView: View {
                         Button {
                             showPopup = true
                         } label: {
-                            Text(L10n.getStarted)
+                            Text("get_started")
                                 .foregroundColor(Color.white)
                                 .frame(maxWidth: .infinity)
                                 .frame(height: 40)

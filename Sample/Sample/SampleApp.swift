@@ -12,6 +12,7 @@ import SwiftUI
 struct SampleApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
     @AppStorage("onboardingLoaded") var onboardingLoaded: Bool = false
+    @State var languageSettings = LanguageSetting()
 
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
@@ -30,8 +31,12 @@ struct SampleApp: App {
         WindowGroup {
             if onboardingLoaded {
                 ContentView()
+                    .environment(languageSettings)
+                    .environment(\.locale, languageSettings.locale)
             } else {
                 OnBoardingView()
+                    .environment(languageSettings)
+                    .environment(\.locale, languageSettings.locale)
             }
         }
         .modelContainer(sharedModelContainer)

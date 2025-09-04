@@ -7,35 +7,41 @@
 
 import SwiftUI
 
+enum SupportedLanguage: String {
+    case english = "en"
+    case tamil = "ta"
+}
+
 struct GetStartedPopOverView: View {
     @Binding var showPopup: Bool
-    @State private var selectedIndex = 0
+    @State private var selectedLanguage = SupportedLanguage.english
+    @Environment(LanguageSetting.self) var languageSetting
 
     var body: some View {
         VStack {
             Image("abc")
                 .frame(width: 120, height: 150)
-            Text(L10n.onboardingChooseLanguage)
+            Text("onboarding_choose_language")
                 .font(.title)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.black)
                 .padding(.bottom, 40)
 
-            Text(L10n.onboardingChangeLatter)
+            Text("onboarding_change_latter")
                 .font(.subheadline)
                 .multilineTextAlignment(.center)
                 .foregroundColor(.gray)
                 .padding(.horizontal, 20)
 
             VStack(spacing: 20) {
-                RadioButtonView(index: 0, text: L10n.onboardingEnglish, selectedIndex: $selectedIndex)
-                RadioButtonView(index: 1, text: L10n.onboardingTamil, selectedIndex: $selectedIndex)
+                RadioButtonView(currentLanguage: .english, text: "onboarding_english", selectedLanguage: $selectedLanguage)
+                RadioButtonView(currentLanguage: .tamil, text: "onboarding_tamil", selectedLanguage: $selectedLanguage)
             }.padding(.all, 40)
 
             Button {
                 showPopup = false
             } label: {
-                Text(L10n.onboadingLetsGo)
+                Text("onboading_lets_go")
                     .foregroundColor(Color.white)
                     .frame(maxWidth: .infinity)
                     .frame(height: 40)
@@ -45,6 +51,16 @@ struct GetStartedPopOverView: View {
             .padding(.horizontal, 40)
             .padding(.bottom, 40)
         }
+        .onChange(of: selectedLanguage) { newValue in
+            languageSetting.setLocale(language: newValue)
+        }
+        .onAppear {
+            if languageSetting.locale.identifier.contains("ta") {
+                selectedLanguage = .tamil
+            } else {
+                selectedLanguage = .english
+            }
+        }
         .background(Color.white)
         .cornerRadius(20)
         .shadow(radius: 5)
@@ -53,19 +69,19 @@ struct GetStartedPopOverView: View {
 }
 
 struct RadioButtonView: View {
-    var index: Int
+    var currentLanguage: SupportedLanguage
     var text: String
-    @Binding var selectedIndex: Int
+    @Binding var selectedLanguage: SupportedLanguage
 
     var body: some View {
         Button {
-            selectedIndex = index
+            selectedLanguage = currentLanguage
         } label: {
             HStack {
                 /* Image(systemName: selectedIndex == index ? "checkmark.circle.fill" : "circle") */
-                Image(systemName: selectedIndex == index ? "largecircle.fill.circle" : "circle")
-                    .foregroundColor(selectedIndex == index ? .orange : .gray)
-                Text(text)
+                Image(systemName: selectedLanguage == currentLanguage ? "largecircle.fill.circle" : "circle")
+                    .foregroundColor(selectedLanguage == currentLanguage ? .orange : .gray)
+                Text(LocalizedStringKey(text))
                     .font(.subheadline)
                     .foregroundColor(.black)
                 Spacer()
