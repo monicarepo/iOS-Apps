@@ -16,6 +16,7 @@ struct GetStartedPopOverView: View {
     @Binding var showPopup: Bool
     @State private var selectedLanguage = SupportedLanguage.english
     @Environment(LanguageSetting.self) var languageSetting
+    @AppStorage("onboardingLoaded") var onboardingLoaded: Bool = false
 
     var body: some View {
         VStack {
@@ -40,6 +41,7 @@ struct GetStartedPopOverView: View {
 
             Button {
                 showPopup = false
+                onboardingLoaded = true
             } label: {
                 Text("onboading_lets_go")
                     .foregroundColor(Color.white)

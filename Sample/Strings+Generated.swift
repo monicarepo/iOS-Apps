@@ -74,6 +74,12 @@ enum L10n {
     static let submit = L10n.tr("Localizable", "submit", fallback: "Submit")
     /// Success
     static let success = L10n.tr("Localizable", "success", fallback: "Success")
+    /// About
+    static let tabviewAbout = L10n.tr("Localizable", "tabview_about", fallback: "About")
+    /// Home
+    static let tabviewHome = L10n.tr("Localizable", "tabview_home", fallback: "Home")
+    /// Saved
+    static let tabviewSaved = L10n.tr("Localizable", "tabview_saved", fallback: "Saved")
 }
 
 // swiftlint:enable explicit_type_interface function_parameter_count identifier_name line_length

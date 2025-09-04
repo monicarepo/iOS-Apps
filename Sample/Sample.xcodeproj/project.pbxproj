@@ -103,6 +103,11 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
+		FDCF43D52E691510009FB967 /* Home */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Home;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -229,6 +234,7 @@
 		FDCF43BA2E67CF98009FB967 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				FDCF43D52E691510009FB967 /* Home */,
 				FDCF43BB2E67CFA1009FB967 /* OnBoarding */,
 			);
 			path = UI;
@@ -291,6 +297,7 @@
 			);
 			fileSystemSynchronizedGroups = (
 				FDCF43BF2E67CFD6009FB967 /* Utils */,
+				FDCF43D52E691510009FB967 /* Home */,
 			);
 			name = Sample;
 			packageProductDependencies = (

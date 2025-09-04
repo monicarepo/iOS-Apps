@@ -30,7 +30,7 @@ struct SampleApp: App {
     var body: some Scene {
         WindowGroup {
             if onboardingLoaded {
-                ContentView()
+                SampleTableView()
                     .environment(languageSettings)
                     .environment(\.locale, languageSettings.locale)
             } else {

@@ -36,3 +36,8 @@
 "onboarding_english" = "ஆங்கிலம்";
 "onboarding_tamil" = "தமிழ்";
 "onboading_lets_go" = "சரி, போகலாம்!";
+
+// Tabview
+"tabview_home" = "வீடு";
+"tabview_about" = "பற்றி";
+"tabview_saved" = "சேமிக்கப்பட்டது";

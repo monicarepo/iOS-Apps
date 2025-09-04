@@ -37,3 +37,8 @@
 "onboarding_english" = "English";
 "onboarding_tamil" = "Tamil";
 "onboading_lets_go" = "OK, let's go!";
+
+// Tabview
+"tabview_home" = "Home";
+"tabview_about" = "About";
+"tabview_saved" = "Saved";
