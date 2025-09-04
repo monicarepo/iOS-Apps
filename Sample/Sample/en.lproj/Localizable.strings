@@ -26,12 +26,12 @@
 
 
 // Onboarding
-"onboarding-title-1" = "Welcome to the sample application";
-"onboarding-title-2" = "Nice Design";
-"onboarding-title-3" = "Connect our app";
-"onboarding-detail-1" = "description 1";
-"onboarding-detail-2" = "description 2";
-"onboarding-detail-3" = "description 3";
+"onboarding-title-1" = "Bible - Simplified";
+"onboarding-title-2" = "Beautiful Design";
+"onboarding-title-3" = "Explore Each Verse";
+"onboarding-detail-1" = "Read the Bible anywhere, anytime!";
+"onboarding-detail-2" = "Modern and interactive design to help you focus on reading";
+"onboarding-detail-3" = "Dive deep into each verse through a library of translations, translitrations and commentaries";
 "onboarding_choose_language" = "Choose your preferred language";
 "onboarding_change_latter" = "(Don't worry, you can change it latter)";
 "onboarding_english" = "English";
@@ -42,3 +42,12 @@
 "tabview_home" = "Home";
 "tabview_about" = "About";
 "tabview_saved" = "Saved";
+
+// About
+"about_bible" = "About Bible";
+"about_title" = "Your word is a lamp to my feet and a light to my path";
+"about_section1" = "The Bible is one of the most influential books in history, treasured by millions around the world. It is not a single book but a library of 66 books, written over centuries by different authors, yet woven together by a unifying story of God and His people.It begins with the story of creation in Genesis, where God brings light, life, and purpose into the world. Soon after, it tells of humanity’s struggles, choices, and separation from God. Yet throughout these stories, God’s love and plan to restore His creation remain clear";
+"about_story" = "STORY";
+"about_section2" = "The Old Testament describes the journey of Israel, a people chosen to carry God’s promise. We read about their triumphs and failures, their prophets and kings, and their deep longing for a Savior.The New Testament reveals the fulfillment of that promise in the life of Jesus Christ. His teachings, miracles, death, and resurrection stand at the heart of the Bible’s message: that through Him, all people can find forgiveness, hope, and eternal life. The letters and writings that follow guide believers in living with faith, love, and courage in everyday life";
+"about_conclusion" = "CONCLUSION";
+"about_section3" = "The Bible is more than an ancient manuscript—it is a living message that continues to inspire, comfort, and guide. It tells a story of love, faith, and redemption that invites every reader to find their place in God’s story";

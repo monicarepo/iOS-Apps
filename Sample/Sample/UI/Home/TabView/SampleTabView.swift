@@ -32,6 +32,7 @@ struct SampleTableView: View {
                     Text("tabview_about")
                 }
         }
+        .accentColor(Color.customColor.primaryOrangeColor)
         .environmentObject(appState)
     }
 
