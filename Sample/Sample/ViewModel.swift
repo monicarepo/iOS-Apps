@@ -15,7 +15,7 @@ class ViewModel: ObservableObject {
 
     func onAppear() {
         logger.info("ContentView View is loaded")
-        print(ConfigurationManager.environment)
+        print(Configuration.environment)
         analyticsManager.logEvent(event: AnalyticsEvent.viewScreenEvent(name: "ContentView"))
     }
 }

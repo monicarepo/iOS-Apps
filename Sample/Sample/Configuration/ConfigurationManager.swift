@@ -27,7 +27,31 @@ private enum BuildConfiguration {
     }
 }
 
-enum API {
+final class ConfigurationManager {
+    static let shared = ConfigurationManager()
+
+    var rapidAPIKey: String!
+    var rapidAPIHost: String!
+    var baseURL: String! {
+        "https://\(url!)"
+    }
+
+    private var url: String!
+
+    private init() {
+        setupValues()
+    }
+
+    private func setupValues() {
+        do {
+            url = try BuildConfiguration.value(for: "BASE_URL")
+            rapidAPIKey = try BuildConfiguration.value(for: "X_RapidAPI_Key")
+            rapidAPIHost = try BuildConfiguration.value(for: "X_RapidAPI_Host")
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+
     static var baseURL: String {
         do {
             return try BuildConfiguration.value(for: "BASE_URL")
@@ -37,7 +61,7 @@ enum API {
     }
 }
 
-enum ConfigurationManager {
+enum Configuration {
     enum Environment {
         case dev
         case qa

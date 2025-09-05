@@ -7,4 +7,6 @@
 
 // Configuration settings file format documentation can be found at:
 // https://developer.apple.com/documentation/xcode/adding-a-build-configuration-file-to-your-project
-BASE_URL = developer.apple.com/qa
+BASE_URL = catholic-bible.p.rapidapi.com
+X_RapidAPI_Host = catholic-bible.p.rapidapi.com
+X_RapidAPI_Key = bc4d6b62a3msh54f51c90af3c7c2p1fcd87jsn0fa13fa37ff2

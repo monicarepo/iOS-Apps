@@ -21,7 +21,7 @@ struct ContentView: View {
                 Text("app_name")
                 Text("app_name_chapter \(count)")
                 Text(L10n.appNameChapter(count))
-                Text(API.baseURL)
+                Text(ConfigurationManager.baseURL)
             }
 //            List {
 //                ForEach(items) { item in

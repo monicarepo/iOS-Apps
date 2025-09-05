@@ -50,5 +50,6 @@ public struct LanguageSelectionView: View {
         }.onAppear {
             selectedLanguage = languageSetting.currentSelectedLanguage
         }
+        .navigationBarTitle("settings-title", displayMode: .inline)
     }
 }

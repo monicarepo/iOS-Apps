@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import NetworkLibrary
 import Swinject
 
 final class Injection {
@@ -32,6 +33,9 @@ final class Injection {
         }
         container.register(AnalyticsManagerProtocol.self) { _ in
             AnalyticsManager(logger: FirebaseAnalyticsManager())
+        }
+        container.register(NetworkManager.self) { _ in
+            NetworkManagerImpl(network: Network())
         }
         return container
     }

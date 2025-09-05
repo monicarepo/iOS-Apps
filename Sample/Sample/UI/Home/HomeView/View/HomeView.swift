@@ -9,6 +9,7 @@ import SwiftUI
 
 struct HomeView: View {
     @EnvironmentObject var appState: AppState
+    var homeViewModel: HomeViewModel
     var body: some View {
         NavigationStack(path: $appState.homeNavDestination) {
             VStack {
@@ -35,6 +36,9 @@ struct HomeView: View {
                 case .languageSelection:
                     LanguageSelectionView()
                 }
+            }
+            .onAppear {
+                homeViewModel.getChapter()
             }
         }
     }

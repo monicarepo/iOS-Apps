@@ -13,7 +13,7 @@ struct SampleTableView: View {
 
     var body: some View {
         TabView(selection: createtabBinding()) {
-            HomeView()
+            HomeView(homeViewModel: HomeViewModel(chaptersRepository: ChaptersRepositoryImpl()))
                 .tag(ViewTab.home)
                 .tabItem {
                     Image(systemName: "house")
