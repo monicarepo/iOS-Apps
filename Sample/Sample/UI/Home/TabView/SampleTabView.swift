@@ -10,10 +10,11 @@ import SwiftUI
 
 struct SampleTableView: View {
     @StateObject private var appState = AppState()
+    private var homeViewModel = HomeViewModel(chaptersRepository: ChaptersRepositoryImpl())
 
     var body: some View {
         TabView(selection: createtabBinding()) {
-            HomeView(homeViewModel: HomeViewModel(chaptersRepository: ChaptersRepositoryImpl()))
+            HomeView(homeViewModel: homeViewModel)
                 .tag(ViewTab.home)
                 .tabItem {
                     Image(systemName: "house")
@@ -86,6 +87,7 @@ enum ViewTab {
 enum HomeNavDestination {
     case settings
     case languageSelection
+    case chapterDetails
 }
 
 enum SavedNavDestination {

@@ -11,7 +11,7 @@ import NetworkLibrary
 
 protocol ChaptersRepository {
     func fetchChapters() -> AnyPublisher<Chapters, APIError>
-    func fetchChapter(bookId: String, chapterId: String) -> AnyPublisher<Chapter, APIError>
+    func fetchChapter(bookId: String, chapterId: String) -> AnyPublisher<ChapterBook, APIError>
 }
 
 class ChaptersRepositoryImpl: ChaptersRepository {
@@ -34,13 +34,17 @@ class ChaptersRepositoryImpl: ChaptersRepository {
         return network.makeRequest(with: request, type: Chapters.self)
     }
 
-    func fetchChapter(bookId: String, chapterId: String) -> AnyPublisher<Chapter, APIError> {
+    func fetchChapter(bookId: String, chapterId: String) -> AnyPublisher<ChapterBook, APIError> {
         guard let baseUrl = URL(string: ConfigurationManager.shared.baseURL) else {
             return Fail(error: APIError.urlError).eraseToAnyPublisher()
         }
         let request = RequestBuilder(baseURL: baseUrl, path: Endpoints.chapter(bookNumber: bookId, chapterNumber: chapterId).path)
         request.set(headers: Headers.defaultHeaders)
         request.set(method: .get)
-        return network.makeRequest(with: request, type: Chapter.self)
+        request.set(parameter: .url([
+            "book_id": bookId,
+            "chapter_num": chapterId,
+        ]))
+        return network.makeRequest(with: request, type: ChapterBook.self)
     }
 }

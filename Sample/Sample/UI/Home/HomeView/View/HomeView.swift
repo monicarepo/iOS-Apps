@@ -10,14 +10,33 @@ import SwiftUI
 struct HomeView: View {
     @EnvironmentObject var appState: AppState
     var homeViewModel: HomeViewModel
+    @Injected private var logger: LoggerType
+
     var body: some View {
         NavigationStack(path: $appState.homeNavDestination) {
             VStack {
-//                Text("HomeView")
-//                    .font(.title)
-//                NavigationLink(value: HomeNavDestination.details) {
-//                    Text("Open Details")
-//                }
+                if homeViewModel.isLoading {
+                    ProgressView("Loading...")
+                        .progressViewStyle(CircularProgressViewStyle())
+                        .padding()
+                } else {
+                    List(homeViewModel.chapters, id: \.self) { item in
+                        HStack {
+                            Text(item.book)
+                                .font(.title3)
+                                .fontWeight(.medium)
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .padding()
+                        }
+                        .contentShape(Rectangle())
+                        .onTapGesture { _ in
+                            homeViewModel.selectedBookId = String(item.id)
+                            homeViewModel.selectedChapterId = "1"
+                            appState.homeNavDestination.append(.chapterDetails)
+                        }
+                    }
+                }
             }
             .navigationTitle(Text("app_title"))
             .toolbar {
@@ -35,10 +54,13 @@ struct HomeView: View {
                     SettingsView()
                 case .languageSelection:
                     LanguageSelectionView()
+                case .chapterDetails:
+                    ChapterDetails(homeViewModel: homeViewModel)
                 }
             }
             .onAppear {
-                homeViewModel.getChapter()
+                logger.debug("HomeView.onAppear")
+                homeViewModel.loadBookIfNeeded()
             }
         }
     }

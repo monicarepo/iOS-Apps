@@ -18,10 +18,33 @@ extension Endpoints {
         switch self {
         case .chapters:
             return "/bible/books"
+        case let .chapter(bookNumber: bookNumber,
+                          chapterNumber: chapterNumber):
+            return "/bible/chapter"
+        case let .verses(bookNumber,
+                         chapterNumber,
+                         versesNumberFrom,
+                         versesNumberTo):
+            return "/bible/verse"
+        }
+    }
+
+    var queryItems: [URLQueryItem]? {
+        switch self {
+        case .chapters:
+            return nil
         case let .chapter(bookNumber: bookNumber, chapterNumber: chapterNumber):
-            return "/bible/chapter?book_id=\(bookNumber)&chapter_num=\(chapterNumber)"
+            return [
+                URLQueryItem(name: "book_id", value: bookNumber),
+                URLQueryItem(name: "chapter_num", value: chapterNumber),
+            ]
         case let .verses(bookNumber: bookNumber, chapterNumber: chapterNumber, versesNumberFrom: versesNumberFrom, versesNumberTo: versesNumberTo):
-            return "/bible/verse?book_id=\(bookNumber)&chapter_num=\(chapterNumber)&verse_from=\(versesNumberFrom)&verse_to=\(versesNumberTo)"
+            return [
+                URLQueryItem(name: "book_id", value: "\(bookNumber)"),
+                URLQueryItem(name: "chapter_num", value: "\(chapterNumber)"),
+                URLQueryItem(name: "verse_from", value: "\(versesNumberFrom)"),
+                URLQueryItem(name: "verse_to", value: "\(versesNumberTo)"),
+            ]
         }
     }
 }
